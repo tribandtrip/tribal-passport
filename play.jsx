@@ -1456,5 +1456,4 @@ Tu reto típico es sencillo de cuidar: ${p.shadow}`;
   return { summary, long };
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+ReactDOM.render(<App />, document.getElementById("root"));
