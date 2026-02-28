@@ -285,6 +285,8 @@ function computeScores(answers) {
   const pct = {};
   for (const e of ENERGIES) {
     const max = (counts[e.key] || 1) * 5;
+
+     
     const raw = scores[e.key];
     pct[e.key] = Math.round((raw / max) * 100);
   }
@@ -560,7 +562,7 @@ function SmallButton({ children, onClick, disabled }) {
    App principal (flujo completo)
 ============================================================ */
 
-export default function App() {
+function App() {
   // Inyectamos fuentes y estilos (sin depender de tailwind)
   useEffect(() => {
     const st = document.createElement("style");
@@ -1451,3 +1453,6 @@ Tu reto típico es sencillo de cuidar: ${p.shadow}`;
 
   return { summary, long };
 }
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
