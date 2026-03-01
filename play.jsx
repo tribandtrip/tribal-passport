@@ -636,16 +636,16 @@ function App() {
   };
 
   const beginPhase = (idx) => {
-    setPhaseIndex(idx);
-    // qIndex: si avanzas a fase 2/3, continúas donde toca
-    if (idx === 0) setQIndex(0);
-    if (idx === 1) setQIndex(10);
-    if (idx === 2) setQIndex(20);
-    setPendingChoice(null);
-    setScreen("quiz");
-    // DNI solo se emite al final; pero lo preparamos aquí para consistencia
-    if (!dni) setDni(formatDniTribal());
-  };
+     setPhaseIndex(idx);
+   
+     // Siempre empezamos desde la pregunta 1
+     setQIndex(0);
+   
+     setPendingChoice(null);
+     setScreen("quiz");
+   
+     if (!dni) setDni(formatDniTribal());
+   };
 
   // ------- Respuesta -------
   const chooseValue = (val) => setPendingChoice(val);
