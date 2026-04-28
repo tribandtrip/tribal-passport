@@ -887,7 +887,7 @@ function App() {
           <Header
             icon="🧩"
             title="Elige tu ritmo"
-            subtitle="No eliges un modo: avanzas por fases. Puedes parar en cada una o seguir para afinar."
+            subtitle="Puedes empezar suave o ir directo al recorrido completo. El Pasaporte Tribal se obtiene al completar Tu Identidad Tribal."
           />
 
           <div style={{ display: "grid", gap: 12 }}>
@@ -930,7 +930,9 @@ function App() {
                     <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" }}>
                       <Pill>🧠 {p.total} preguntas</Pill>
                       <Pill>⏳ ~{idx === 0 ? "3" : idx === 1 ? "7" : "12"} min</Pill>
+                     {idx === 2 && <Pill>🛂 Pasaporte completo</Pill>}
                     </div>
+                  
                   </div>
                   <div style={{ color: BRAND.colors.verde, fontWeight: 900, fontSize: 18 }}>›</div>
                 </div>
