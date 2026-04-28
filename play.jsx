@@ -506,7 +506,7 @@ function PrimaryButton({ children, onClick, disabled }) {
       className="tt-btn"
       style={{
         width: "100%",
-        padding: "14px 16px",
+        padding: "18px 20px",
         background: BRAND.colors.verde,
         color: BRAND.colors.arena,
         border: "1px solid rgba(79,95,62,0.25)",
@@ -514,6 +514,8 @@ function PrimaryButton({ children, onClick, disabled }) {
         cursor: disabled ? "not-allowed" : "pointer",
         opacity: disabled ? 0.7 : 1,
         transition: "opacity 200ms ease",
+        fontSize: 18,
+        fontWeight: 900,
       }}
     >
       {children}
