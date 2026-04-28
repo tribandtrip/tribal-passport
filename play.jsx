@@ -887,7 +887,7 @@ function App() {
           <Header
             icon="🧩"
             title="Elige tu ritmo"
-            subtitle="Puedes empezar suave o ir directo al recorrido completo. El Pasaporte Tribal se obtiene al completar Tu Identidad Tribal."
+            subtitle="Esto no va de hacerlo todo perfecto. Va de entenderte. Si llegas al final, tendrás tu Pasaporte."
           />
 
           <div style={{ display: "grid", gap: 12 }}>
@@ -920,17 +920,15 @@ function App() {
                   >
                     {p.icon}
                   </div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontFamily: BRAND.fonts.title, fontWeight: 900, fontSize: 18 }}>
-                      {p.title}
-                    </div>
+                     <div style={{ fontFamily: BRAND.fonts.title, fontWeight: 900, fontSize: 18 }}>
+                       {p.title} {idx === 2 ? "· Pasaporte completo" : ""}
+                     </div>
                     <div className="tt-muted" style={{ fontSize: 13, lineHeight: 1.35, marginTop: 2 }}>
                       {p.subtitle}
                     </div>
                     <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" }}>
                       <Pill>🧠 {p.total} preguntas</Pill>
                       <Pill>⏳ ~{idx === 0 ? "3" : idx === 1 ? "7" : "12"} min</Pill>
-                     {idx === 2 && <Pill>🛂 Pasaporte completo</Pill>}
                     </div>
                   
                   </div>
