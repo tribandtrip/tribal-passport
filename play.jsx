@@ -860,7 +860,7 @@ function App() {
             </div>
 
             <div className="tt-muted" style={{ fontSize: 14, lineHeight: 1.55, marginBottom: 14 }}>
-              Al final conseguirás tu <b>Pasaporte Tribal</b> (descargable), con tu identidad, tu núcleo tribal y tus compatibilidades.
+              Al final obtendrás tu <b>Nº de Pasaporte Tribal</b>, tu identidad dentro de la tribu y las pistas para completar tu pasaporte físico.
             </div>
 
             <div className="tt-muted2" style={{ fontSize: 12, lineHeight: 1.45, marginBottom: 16 }}>
@@ -972,38 +972,18 @@ function App() {
                 background: "rgba(255,255,255,0.72)",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <div
-                    style={{
-                      width: 44,
-                      height: 44,
-                      borderRadius: 16,
-                      display: "grid",
-                      placeItems: "center",
-                      border: "1px solid rgba(79,95,62,0.12)",
-                      background: BRAND.colors.arena,
-                      fontSize: 20,
-                    }}
-                    aria-label="Energía de la pregunta"
-                    title={`Esta pregunta mide: ${energyByKey[q.energy].name}`}
-                  >
-                    {energyByKey[q.energy].icon}
-                  </div>
-
-                  <div>
-                    <div style={{ fontFamily: BRAND.fonts.title, fontWeight: 900, color: BRAND.colors.verde }}>
-                      {energyByKey[q.energy].name}
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+                 <div>
+                      <div style={{ fontFamily: BRAND.fonts.title, fontWeight: 900, color: BRAND.colors.verde }}>
+                        Responde con sinceridad
+                      </div>
+                      <div className="tt-muted2" style={{ fontSize: 12, marginTop: 2 }}>
+                        No hay respuestas buenas o malas.
+                      </div>
                     </div>
-                    <div className="tt-muted2" style={{ fontSize: 12 }}>
-                      {ENERGY_DEFS[q.energy].essence}
-                    </div>
-                  </div>
-                </div>
-
-                <Pill>IA: 1–5</Pill>
-              </div>
-
+                  
+                    <Pill>Escala 1–5</Pill>
+               </div>
               <div
                 style={{
                   marginTop: 12,
@@ -1432,7 +1412,7 @@ function shortNarrative(primary, secondary) {
   if (!primary || !secondary) return "Tu energía se está dibujando. Sigue un poco más para afinar.";
   const p = energyByKey[primary]?.name;
   const s = energyByKey[secondary]?.name;
-  return `Se nota ${p} como energía dominante, con matiz ${s}. Si continúas, afinamos el equilibrio y la compatibilidad tribal.`;
+  return `Empieza a verse una energía ${p}, con un matiz ${s}. Si sigues, afinamos mejor tu identidad dentro de la tribu.`;
 }
 
 function buildLongNarrative({ profile, primary, secondary, scoresPct }) {
