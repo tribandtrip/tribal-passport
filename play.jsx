@@ -124,7 +124,7 @@ const ENERGY_DEFS = {
     frictionWith: ["FUEGO"],
   },
   SOL: {
-    essence: "Motivación, optimismo, liderazgo cálido.",
+    essence: "Motivación, optimismo, liderazgo.",
     tribeRole: "Inspira y eleva cuando el grupo baja.",
     gifts: ["Confianza", "Dirección", "Energía positiva"],
     shadow: "Puede negar emociones difíciles o empujar de más.",
